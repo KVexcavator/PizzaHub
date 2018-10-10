@@ -1,0 +1,38 @@
+<h3>Pizza list</h3>
+<div class="row">
+  <% @products.each do |p| %>
+  <div class="col-md-3">
+    <div>
+      <h4><%= p.title %></h4>
+    </div>
+
+    <div>
+      <img src="<%= p.path_to_image %>" style="width:150px; hight: 150px; margin: 20px 20px">
+    </div>
+    
+    <div>
+      Description : <%= p.description %>
+    </div>
+    
+    <div>
+      Size : <%= p.size %> meters
+    </div>
+
+    <div>
+      Price : <%= p.price %> papers
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-success btn-sm" onclick="add_to_cart(<%= p.id %>)">Add to cart</button>
+    </div>
+
+
+    <div class="w-100"></div>
+    
+  </div>
+  <% end  %>
+</div>
+<br>
+<br>
+<button class="btn btn-primary btn-lg" onclick="something()">Click Me</button>
+
