@@ -26,6 +26,10 @@ get '/cart' do
 	erb :cart			
 end
 
+post '/place_order' do
+	
+end
+
 post '/cart' do
 	@orders_input=params[:orders]
 	@items=parse_orders_input @orders_input
